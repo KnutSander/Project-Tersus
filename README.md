@@ -1,16 +1,6 @@
 # CE299 - Team 5 - Smart Hand Sanitisation Solution
 ![logo](./documents/images/branding/png/logo.png)
 
-## Presentation with OneDrive Links
-The presentation discusses various aspects of Project Tersus - such as details on the software and hardware design, productisation, and each member's individual contributions.
-* Andrei Alexandru Talpan - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/at19609_essex_ac_uk/EZEgd2xpFu5IgvFXz29m-8cBEmlCbMy6Li4Sjxi17DVo8A)
-* Adam Duarte-Dias - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/aduart_essex_ac_uk/Eat3uC2M3-pOjDGcXKzrkk4BpFV4g5Fc3Gku095Idrm5ew)
-* Arif Meighan - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/r/personal/an18410_essex_ac_uk/Documents/Final_1080p.mp4?csf=1&web=1&e=krILcO)
-* Knut Sander Lien Blakkestad - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/kb19109_essex_ac_uk/ETIyqd8fzzRKgPoxxjQwhJgBDX_aRZnMHxQBUv-yn2qQHw?e=wuADYR)
-* Hazim Mohamed-Khan - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/hm19363_essex_ac_uk/EaKLxATOV9tHg3BuAiHPYWMByEB2YxS220GQPLmsxu99wA)
-* Alex Newson - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/an18410_essex_ac_uk/EdyUYUDqzTdKrvqYyLCAUucB8SM_Qy0R5uhrZ4_KE3QHYA)
-* Samuel Engel - [OneDrive Link](https://essexuniversity-my.sharepoint.com/:v:/g/personal/se19858_essex_ac_uk/Ec73M_0OMRFGtbEFncMxbIABPDx3wnypI2EXrwrzJ-Dg3Q?e=Trz2iL)
-
 ## How to Run
 These are instructions to view the website on our own server.  
 Visit the URL: http://165.232.106.34/user/login.   

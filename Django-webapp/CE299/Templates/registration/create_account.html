@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+<!--===============================================================================================
+	<link rel="stylesheet" type="text/css" href="{% staticvendor/bootstrap/css/bootstrap.min.css">-->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<!--===============================================================================================
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-	->
+
+===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login-util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login-main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url('/static/img/logo.png');">
+					
+				</div>
+
+				<form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Enter username">
+						<span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Enter email">
+						<span class="focus-input100"></span>
+                    </div>
+                    
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="pass" id="password" placeholder="Enter password">
+						<span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Match Password</span>
+						<input class="input100" type="password" name="pass_confirm" id="confirm_password" placeholder="Enter password">
+                        <span class="focus-input100"></span>
+                        
+					</div>
+                    <span id='message'></span>
+					<div class="flex-sb-m w-full p-b-30">
+						
+							<a href="{% url 'login' %}" class="txt1">
+								Go back to login
+							</a>
+							
+						
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Create account
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'js/jquery.3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/popper.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+	<script src="{% static 'js/login.js' %}"></script>
+
+    <script>
+        $('#password, #confirm_password').on('keyup', function () {
+            if ($('#password').val() == $('#confirm_password').val()) {
+              $('#message').html('Passwords are matching').css('color', 'green');
+            } else 
+              $('#message').html('Passwords are not the same').css('color', 'red');
+          });
+    </script>
+</body>
+</html>

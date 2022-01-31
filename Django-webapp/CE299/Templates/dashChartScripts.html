@@ -1,0 +1,83 @@
+
+{% block dashChartScripts %}
+<script>
+    const HistoryGraph = new Chart(document.getElementById('24hGraph').getContext('2d'), {
+        // The type of chart we want to create
+        type: 'line',
+        // The data for our dataset
+        data: {
+            labels: ['12h', '11h', '10h', '9h', '8h', '7h', '6h', '5h', '4h', '3h', '2h', '1h', ''],
+            datasets: [{
+                label: 'Hand Washes',
+                backgroundColor: '#98a148',
+                borderColor: '#98a148',
+                data: {{ HistogramData }}
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            maintainAspectRatio: false,
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        maxTicksLimit: 4,
+                    }
+                }]
+            }
+        }
+    });
+
+    const dangerDonut = new Chart(document.getElementById('dangerDonut').getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            labels: ['High', 'Medium', 'Low'],
+            datasets: [{
+                label: 'Hand Washes',
+                backgroundColor: [
+                    '#e74c3c',
+                    '#f39c12',
+                    '#98a148',
+                ],
+                data: {{ DangerDonutData }}
+            }]
+        },
+        options: {
+
+        }
+    });
+
+    const departmentRisk = new Chart(document.getElementById('departmentRisk').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: ['Radiotherapy', 'ICU', 'Cardiology', 'A&E', 'Pharmacy'],
+            datasets: [{
+                label: 'High',
+                backgroundColor: '#e74c3c',
+                data: {{ BarChartDataHigh }}
+            }, {
+                label: 'Medium',
+                backgroundColor: '#f39c12',
+                data: {{ BarChartDataMed }}
+            }, {
+                label: 'Low',
+                backgroundColor: '#98a148',
+                data: {{ BarChartDataLow }}
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+</script>
+{% endblock dashChartScripts %}

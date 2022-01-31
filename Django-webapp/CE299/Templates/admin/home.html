@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+    
+{% if not user.is_authenticated %}
+  <meta http-equiv="refresh" content="0; URL='/user/login'" />
+{% else %}
+    {% if not user.is_superuser %}
+    <meta http-equiv="refresh" content="0; URL='/analytics'" />
+    {% endif %}
+{% endif %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+<!--===============================================================================================
+	<link rel="stylesheet" type="text/css" href="{% staticvendor/bootstrap/css/bootstrap.min.css">-->
+    <link href="{% static 'css/light-bootstrap-dashboard.css' %}" rel = "stylesheet">
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<!--===============================================================================================
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-	->
+
+===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login-util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login-main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100"> 
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url('/static/img/logo.png');">
+					
+				</div>
+               <hr>
+               {% if user.is_authenticated %}
+               <h1 class="text-center">Welcome, {{user.username}}</h1>
+               {% if user.is_superuser %}
+               <hr>
+					<div class="container-login100-form-btn">
+						<a href="/admin/auth/user" style="color: #ffffff;margin:auto;">
+                            <button class="btn btn-primary" style="color: #ffffff; ">
+                               Account Management
+                           </button></a> 
+                        <a href="{% url 'home' %}" style="color: #ffffff;margin:auto;">
+                            <button class="btn btn-primary" style="color: #ffffff; ">
+                               View Website
+                           </button></a> 
+                        <a href="{% url 'password_change' %}" style="color: #ffffff;margin:auto;">
+                        <button class="btn btn-primary" style="margin: auto;">
+                            Change Password
+                        </button>
+                    </a>
+                        <a href="{% url 'logout' %}" style="color: #ffffff;margin:auto;">
+                             <button class="btn btn-primary" style="color: #ffffff; ">
+                                Logout
+                            </button></a> 
+					</div>
+                    {% else %}
+                    <hr>
+					<div class="container-login100-form-btn">
+						
+            <a href="{% url 'login' %}" style="color: #ffffff;margin:auto;">
+              <button class="btn btn-primary" style="color: #ffffff; ">
+                 Please Log in with an admin account
+             </button></a> 
+					</div>
+                    {% endif %}
+                    {% else %}
+                    <hr>
+					<div class="container-login100-form-btn">
+            <a href="{% url 'login' %}" style="color: #ffffff;margin:auto;">
+              <button class="btn btn-primary" style="color: #ffffff; ">
+                 Please Log in with an admin account
+             </button></a> 
+					</div>
+                    {% endif %}
+
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'js/jquery.3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/popper.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+	<script src="{% static 'js/login.js' %}"></script>
+
+</body>
+</html>

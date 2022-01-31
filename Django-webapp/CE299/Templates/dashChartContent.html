@@ -1,0 +1,64 @@
+
+
+{% block dashChartContent %}
+<div class="row">
+    <h1>Today</h1>
+    <div class="col-sm-3">
+        <div class="card text-center">
+            <span class="stats_number">{{ TimesWashed }}</span>
+            <h2>Hand Washes</h2>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="card text-center">
+            <span class="stats_number">{{ AvgDuration }}</span>
+            <h2>Avg. Duration</h2>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="card text-center">
+            <span class="stats_number">{{ Employee }}</span>
+            <h2>Employees</h2>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="card text-center">
+            <span class="stats_number">{{ EmptySanitizers }}</span>
+            <h2>Empty Stations</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4>Wash Hand History</h4>
+        <div class="content">
+            <canvas id="24hGraph" height="150"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h1>Hygiene Risk</h1>
+    <div class="col-sm-6">
+        <div class="header">
+            <h4 class="title">Danger Donut</h4>
+        </div>
+        <div class="content">
+            <canvas id="dangerDonut"></canvas>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="header">
+            <h4 class="title">Risk by Department</h4>
+        </div>
+        <div class="content">
+            <canvas id="departmentRisk"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock dashChartContent %}

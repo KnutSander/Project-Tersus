@@ -1,0 +1,8 @@
+Student Samuel Engel was here. 23/10 - 16:05
+Student Alex Newson was here: 23/10 - 17:14
+Student Arif Meighan was here: 23/10 - 17:48
+Student Knut Sander Blakkestad was here: 25/10 - 13:32
+Student Adam Duarte-Dias was here: 26/10 - 16-03
+Student Andrei Talpan was here : 30/10 -10:44
+
+test CI setup
